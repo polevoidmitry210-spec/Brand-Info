@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Каталог брендов</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Arial,sans-serif;background:#fff;color:#000;display:flex;height:100vh;}
+nav{width:250px;background:#f4f4f4;border-right:1px solid #ddd;padding:20px;overflow-y:auto;}
+nav h2{font-size:1.2rem;margin-bottom:20px;color:#333;}
+.menu-btn{display:block;width:100%;padding:10px 15px;margin-bottom:8px;background:#e9e9e9;color:#333;border:none;border-radius:5px;text-align:left;cursor:pointer;font-size:0.95rem;}
+.menu-btn:hover,.menu-btn.active{background:#000;color:#fff;font-weight:bold;}
+main{flex:1;padding:40px;display:flex;justify-content:center;align-items:center;overflow-y:auto;}
+.card{display:none;background:#fff;border:1px solid #ddd;border-radius:10px;padding:30px;width:100%;max-width:600px;box-shadow:0 4px 15px rgba(0,0,0,0.1);}
+.card.active{display:block;}
+.card h1{font-size:2rem;margin-bottom:15px;color:#111;}
+.card img{width:100%;max-height:200px;object-fit:contain;border-radius:5px;margin-bottom:20px;padding:10px;}
+.specs{list-style:none;}
+.specs li{padding:8px 0;border-bottom:1px solid #eee;font-size:1.05rem;color:#333;}
+.specs li span{color:#666;}
+</style>
+</head>
+<body>
+
+<nav>
+<h2>Бренды</h2>
+<button class="menu-btn active" onclick="show('acer',this)">Acer</button>
+<button class="menu-btn" onclick="show('amd',this)">AMD</button>
+<button class="menu-btn" onclick="show('apple',this)">Apple</button>
+<button class="menu-btn" onclick="show('dell',this)">Dell</button>
+<button class="menu-btn" onclick="show('google',this)">Google</button>
+<button class="menu-btn" onclick="show('hp',this)">HP</button>
+<button class="menu-btn" onclick="show('intel',this)">Intel</button>
+<button class="menu-btn" onclick="show('lenovo',this)">Lenovo</button>
+<button class="menu-btn" onclick="show('logitech',this)">Logitech</button>
+<button class="menu-btn" onclick="show('microsoft',this)">Microsoft</button>
+<button class="menu-btn" onclick="show('samsung',this)">Samsung</button>
+</nav>
+
+<main>
+<div id="acer" class="card active">
+<h1>Acer</h1>
+<img src="acer.png" alt="Acer">
+<ul class="specs">
+<li><span>Сфера:</span> Техника и электроника</li>
+<li><span>Основание:</span> 1976 год, Тайвань</li>
+<li><span>Продукция:</span> Ноутбуки, мониторы</li>
+</ul>
+</div>
+
+<div id="amd" class="card">
+<h1>AMD</h1>
+<img src="amd.png" alt="AMD">
+<ul class="specs">
+<li><span>Сфера:</span> Полупроводники</li>
+<li><span>Основание:</span> 1969 год, США</li>
+<li><span>Продукция:</span> Процессоры Ryzen, видеокарты</li>
+</ul>
+</div>
+
+<div id="apple" class="card">
+<h1>Apple</h1>
+<img src="apple.png" alt="Apple">
+<ul class="specs">
+<li><span>Сфера:</span> Гаджеты и ПО</li>
+<li><span>Основание:</span> 1976 год, США</li>
+<li><span>Продукция:</span> iPhone, Mac, iOS</li>
+</ul>
+</div>
+
+<div id="dell" class="card">
+<h1>Dell</h1>
+<img src="dell.png" alt="Dell">
+<ul class="specs">
+<li><span>Сфера:</span> ПК и серверы</li>
+<li><span>Основание:</span> 1984 год, США</li>
+<li><span>Продукция:</span> Ноутбуки, мониторы</li>
+</ul>
+</div>
+
+<div id="google" class="card">
+<h1>Google</h1>
+<img src="google.png" alt="Google">
+<ul class="specs">
+<li><span>Сфера:</span> Интернет и ПО</li>
+<li><span>Основание:</span> 1998 год, США</li>
+<li><span>Продукция:</span> Android, Поисковик, Pixel</li>
+</ul>
+</div>
+
+<div id="hp" class="card">
+<h1>HP</h1>
+<img src="hp.png" alt="HP">
+<ul class="specs">
+<li><span>Сфера:</span> ПК и печать</li>
+<li><span>Основание:</span> 1939 год, США</li>
+<li><span>Продукция:</span> Ноутбуки, принтеры</li>
+</ul>
+</div>
+
+<div id="intel" class="card">
+<h1>Intel</h1>
+<img src="intel.png" alt="Intel">
+<ul class="specs">
+<li><span>Сфера:</span> Микропроцессоры</li>
+<li><span>Основание:</span> 1968 год, США</li>
+<li><span>Продукция:</span> Процессоры Core</li>
+</ul>
+</div>
+
+<div id="lenovo" class="card">
+<h1>Lenovo</h1>
+<img src="lenovo.png" alt="Lenovo">
+<ul class="specs">
+<li><span>Сфера:</span> Электроника и ПК</li>
+<li><span>Основание:</span> 1984 год, Китай</li>
+<li><span>Продукция:</span> ThinkPad, Legion</li>
+</ul>
+</div>
+
+<div id="logitech" class="card">
+<h1>Logitech</h1>
+<img src="logitech.png" alt="Logitech">
+<ul class="specs">
+<li><span>Сфера:</span> Периферия</li>
+<li><span>Основание:</span> 1981 год, Швейцария</li>
+<li><span>Продукция:</span> Мыши, клавиатуры</li>
+</ul>
+</div>
+
+<div id="microsoft" class="card">
+<h1>Microsoft</h1>
+<img src="microsoft.png" alt="Microsoft">
+<ul class="specs">
+<li><span>Сфера:</span> ПО и технологии</li>
+<li><span>Основание:</span> 1975 год, США</li>
+<li><span>Продукция:</span> Windows, Xbox, Surface</li>
+</ul>
+</div>
+
+<div id="samsung" class="card">
+<h1>Samsung</h1>
+<img src="samsung.png" alt="Samsung">
+<ul class="specs">
+<li><span>Сфера:</span> Электроника</li>
+<li><span>Основание:</span> 1938 год, Южная Корея</li>
+<li><span>Продукция:</span> Смартфоны Galaxy, дисплеи</li>
+</ul>
+</div>
+</main>
+
+<script>
+function show(id, btn){
+document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));
+document.querySelectorAll('.menu-btn').forEach(b=>b.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>
